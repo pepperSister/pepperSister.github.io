@@ -1,0 +1,323 @@
+
+fontSize = 10px
+fontColor = rgb(51, 51, 51)
+linkColor = #317ef3
+lineHeight = 1rem
+outlineColor = #20a0ff
+bgColor = white
+btnFixColor = #FF983C
+btnDelColor = #ff6656
+btnColor = #20a0ff
+btnColorHover = #4db3ff
+errColor = #a94442
+body,html,ul
+  font-family: 'Microsoft YaHei light', Helvetica, Arial, sans-serif
+  margin 0 
+  padding 0
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+body,html
+  width 100%
+  min-height 100vh
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.bg {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(
+    to bottom right,  
+    #fd2638, #FFFFFF,#fd2638,#fff,#fd2638,#fff);
+  background-repeat: no-repeat;
+  background-size: 500% 500%;
+  animation: gradient 80s ease infinite;
+}
+
+
+    
+@keyframes gradient { 
+  0%{background-position:0% 0%}
+  50%{background-position:100% 100%}
+  100%{background-position:0% 0%}
+}
+
+a,a:visited
+  text-decoration: none
+  font-size: fontSize * 1.6
+  color: fontColor
+
+li
+  list-style: none
+  
+
+p
+  word-wrap: break-word
+  word-break: break-word
+
+.inputLine
+  flex: 1
+  display: flex
+  justify-content: center
+  align-content: center
+  align-items: center
+  margin-bottom: lineHeight * 1.5
+
+.btnLine
+  display: flex
+  justify-content: space-around
+  padding-bottom: lineHeight * 1
+
+.checkLine
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  padding-bottom: lineHeight * 1
+table
+  border-collapse: collapse
+
+input[type='text'],input[type='password'],input[type='email']
+input[type='number'],textarea,input[type="file"]
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+  background-color: bgColor
+  background-image: none
+  border-radius: 4px
+  border: 1px solid #bfcbd9
+  box-sizing: border-box
+  color: #1f2d3d
+  display: block
+  font-size: inherit
+  height: 36px
+  line-height: 1
+  outline: 0
+  padding: 3px 10px
+  transition: border-color .2s cubic-bezier(.645,.045,.355,1)
+  flex: 1
+  width: 100%
+
+input[type='text']:focus,input[type='password']:focus,input[type='email']:focus
+input[type='number']:focus
+  outline: 0;
+  border-color: outlineColor
+
+button
+  line-height: 1
+  white-space: nowrap
+  cursor: pointer
+  background: #fff
+  border: 0
+  color: #1f2d3d
+  -webkit-appearance: none
+  text-align: center
+  box-sizing: border-box
+  outline: 0
+  margin: 0
+  padding: 10px 15px
+  font-size: 14px
+  border-radius: 4px
+  background-color: btnColor 
+  color: white
+  &:hover
+    background: btnColorHover
+    border-color: btnColorHover
+.btnFix
+  background #e67e22
+  &:hover
+    background btnFixColor
+.btnDel
+  background: #e74c3c
+  &:hover
+    background btnDelColor
+.inputErr
+  font-size: fontSize
+  color: errColor
+
+input[type="password"].inputErr
+  border-color: errColor
+input[type="password"].inputErr:focus
+    border-color: errColor;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 6px errColor
+
+.wrap
+  display:flex
+  flex-direction: column
+  height: 100%
+
+navbarHeight = 50px
+.navbar
+  display:flex
+  height: navbarHeight
+  box-shadow: 0 0 20px #cac6c6
+  background-color: white
+  justify-content: space-between
+  align-items: center
+  padding: 0 25px
+
+
+.navbarHeader
+  display: flex
+  width: 150px
+  justify-content: flex-start
+
+
+.navbarContent
+  min-width: 360px
+  
+.navbarItem
+  display: flex
+  justify-content: space-between
+
+.navbarItem li,.sidebarItem li
+  line-height: navbarHeight
+  padding:0 30px
+
+.navbarItem li:hover 
+  background-color: #E7E7E7
+  
+.sidebarItem li:hover
+  border-left: 3px solid #00acac
+  background-color: #4f5b69
+  transition: all .1s ease
+
+
+a.navbarTitle
+  font-size: fontSize * 2
+  color: linkColor
+
+.sidebarItem li a
+  color: #d5ffff
+
+.mainContent
+  flex:1
+  display: flex
+  flex-flow: row
+.mainSidebar
+  min-width: 200px;
+  background-color: #4f5b69;
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+.content
+  flex: 1
+  background-color: rgba(0,0,0,0.3);
+  overflow: auto;
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  flex-direction: column
+  position relative
+.menu
+  width: 100%
+  height: 35px;
+footer
+  min-height: navbarHeight
+  background-color: white;
+  display: flex
+  align-items: center
+  justify-content: center
+  font-size: 0.8rem
+
+.itemList
+  display: flex
+  flex: 1
+  width: 100%
+  flex-direction: column
+.tableBox
+  width 100%
+  text-align center
+.tableLine
+  height 3rem
+  border-bottom 1px solid white
+.tableHead
+  color: white
+  height: 4rem
+  padding: 2rem 0 .5rem 0
+.showImg
+  width 160px
+  height 120px
+
+
+.pageBox
+  display flex
+  margin-top 2rem
+  justify-content: center
+
+.pageTitle
+  display: flex
+  height 50px
+  align-items: center
+  color white
+  padding-left: 10px
+.pageTitle h2
+  margin-right 100px
+
+
+.layer
+  width 100%
+  height 100%
+  background rgba(0,0,0,0.6)
+  position absolute
+  display flex
+  justify-content center
+  align-items center
+.layerHeader
+  border-radius: 2px 2px 0 0
+.layerTitle
+  padding: 0 0px 0 20px;
+  height: 42px;
+  line-height: 42px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  color: #333;
+  overflow: hidden;
+  background-color: #F8F8F8;
+  border-radius: 2px 2px 0 0;
+.layerContent
+  padding 2rem 2rem 0rem 2rem
+.addInfo
+  display: block
+  width 600px
+  background white
+  color black
+  position relative
+  box-shadow 0px 0px 60px rgba(255,255,255,0.5)
+.cancel
+  float right
+  padding 10px 30px
+.layerIcon:before,.layerIcon:after
+  background red
+.contact
+  display: flex
+  flex: 1
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  color: white
+.inputLine label 
+  padding-right 2rem
+
+.toast
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+.toastContent
+  min-width: 100px;
+  height: 40px;
+  border-radius: 20px 20px;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  color: #fff;
+  justify-content: center;
+  align-items: center;

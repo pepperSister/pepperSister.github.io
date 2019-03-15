@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+    <title>加入我们</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+        }
+
+        @media screen and (max-width:300px) and (max-height:500px) {
+            html {
+                font-size: 12px;
+            }
+        }
+
+        @media screen and (min-width:300px) and (min-height:500px) {
+            html {
+                font-size: 15px;
+            }
+        }
+
+        .joinCon {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom right, #fd2638, #3d8cd7, #48ecb6);
+            background-repeat: no-repeat;
+            background-size: 500% 500%;
+            animation: gradient 80s ease infinite;
+            font-size: 1.4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 0%;
+            }
+            50% {
+                background-position: 100% 100%;
+            }
+            100% {
+                background-position: 0% 0%;
+            }
+        }
+
+        .joinCon .secondColumn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .joinForm input,
+        select {
+            height: 35px;
+            border-radius: 4px;
+            border: 0;
+            padding-left: 5px;
+            width: 170px;
+        }
+
+        .joinForm select {
+            width: 174px;
+        }
+
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+        }
+
+        .button-group {
+            justify-content: flex-start;
+        }
+
+        #notify {
+            display: none;
+            margin-left: 1rem;
+            font-size: 1rem;
+            line-height: 2;
+            font-weight: bold;
+            color: black;
+        }
+
+        #success {
+            display: none;
+            min-width: 100px;
+            max-width: 300px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            bottom: 5rem;
+            border-radius: 30px;
+            font-size: 1rem;
+            color: white;
+        }
+
+        .form-group label {
+            padding-right: 2rem;
+            color: white;
+        }
+
+        .subJoin:hover {
+            box-shadow: 0 0px 10px 0 rgba(255, 255, 255, 0.6);
+        }
+
+        .subJoin {
+            background: linear-gradient(to bottom right, #fd2638, #3d8cd7, #48ecb6);
+            background-repeat: no-repeat;
+            background-size: 500% 500%;
+            animation: gradient 80s ease infinite;
+            border: none;
+            width: 100px;
+            border-radius: 15px;
+            height: 30px;
+            color: white;
+            cursor: pointer;
+            position: relative;
+            z-index: 10;
+            transition: box-shadow 0.5s;
+        }
+
+
+        .joinCon .firstColumn,
+        .secondColumn {
+            background: none;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 0%;
+            }
+            50% {
+                background-position: 100% 100%;
+            }
+            100% {
+                background-position: 0% 0%;
+            }
+        }
+
+        .CERTLogo {
+            font-size: 4rem;
+            color: #48ecb6;
+        }
+
+        .teamText {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .teamText-tiny {
+            font-size: 2rem;
+            letter-spacing: 5px;
+            color: white;
+        }
+
+        .teamText-strong {
+            font-size: 2rem;
+            letter-spacing: 5px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="joinCon">
+        <div class="CERTLogo">CERT</div>
+        <div class="teamText">
+            <span class='teamText-tiny'>专注I&nbsp;T&nbsp;技术</span>
+            <span class="teamText-strong">服务交大师生</span>
+        </div>
+        <br>
+        <form class="joinForm" action="javascript:0;">
+            <div class="form-group">
+                <label for="">姓名</label>
+                <input type="text" class="joinName" placeholder="请输入你的名字">
+            </div>
+            <div class="form-group">
+                <label for="">联系方式</label>
+                <input type="text" class="joinPhone" placeholder="请输入你的电话号码">
+            </div>
+            <div class="form-group">
+                <label for="">QQ</label>
+                <input type="text" class="joinQQ" placeholder="请输入你的QQ">
+            </div>
+            <div class="form-group">
+                <label for="">学院</label>
+                <input type="text" class="joinCollege" placeholder="请输入你的学院">
+            </div>
+            <div class="form-group">
+                <label for="">部门</label>
+                <select class="joinDepart">
+                <option value ="产品设计部">产品设计部</option>
+                <option value ="技术研发部">技术研发部</option>
+                <option value="硬件维修部">硬件维修部</option>
+                <option value="创意策划部">创意策划部</option>
+			</select>
+            </div>
+            <div class="form-group button-group">
+                <button class="subJoin" onclick="subJoin()">提交</button>
+                <div id="notify"></div>
+            </div>
+        </form>
+        <div id="success"></div>
+    </div>
+
+</body>
+<script>
+    function subJoin() {
+        var name = $("input.joinName").val().trim();
+        var phone = $("input.joinPhone").val().trim();
+        var QQ = $("input.joinQQ").val().trim();
+        var college = $("input.joinCollege").val().trim();
+        var depart = $(".joinDepart").val().trim();
+        var msg = '';
+        var numreg = new RegExp("^[0-9]*$");
+        var hanreg = new RegExp('^[\u4e00-\u9fa5]+$');
+        if (name.length > 7 || name.length < 1) {
+            msg = "姓名长度？(╯‵□′)╯︵┻━┻";
+        } else if (!hanreg.test(name)) {
+            msg = "姓名不对！（〃｀д´ ) 👚﻿";
+        } else if (phone.length != 11 || phone.length < 1) {
+            msg = "手机号长度？(╯‵□′)╯︵┻━┻";
+        } else if (!numreg.test(phone)) {
+            msg = "手机号不对！（〃｀д´ ) 👚﻿";
+        } else if (depart.length < 1) {
+            msg = "部门呢？（〃｀д´ ) 👚﻿";
+        }
+        if (msg.length > 0) {
+            $('#notify').text(msg);
+            $('#notify').show();
+            $('#notify').hide(1000);
+            return;
+        }
+        $.post("http://lj661.cn:8000/fresh", 'name=' + name + '&college=' + college + '&QQ=' + QQ + '&phone=' + phone +
+            '&depart=' + depart,
+            function (data) {
+                $(".subJoin").attr("disabled");
+                console.log(data);
+                console.log(data.status);
+                if (data.status == 200) {
+                    $("#success").html("报名成功!请等待短信或邮件提醒");
+                    $("#success").show();
+                    setTimeout(function(){$("#success").hide();},3000);
+
+                } else if(data.status == 300){
+                    $("#success").html("你已经报名了");
+                    $("#success").show();
+                    setTimeout(function(){$("#success").hide();},3000);
+
+                } else {
+                    $("#success").html(":(失败了");
+                    $("#success").show();
+                    setTimeout(function(){$("#success").hide();},3000);
+                }
+                $(".subJoin").removeAttr("disabled");
+            });
+    }
+</script>
+
+</html>

@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+	<title>华东交通大学计算机紧急响应组</title>
+	<meta name="keywords" content="名人堂 ,计算机紧急响应组,CERT">
+	<meta name="description" content="名人堂 ,计算机紧急响应组,CERT">
+	<link rel="stylesheet" type="text/css" href="css/font.css">
+	<link rel="stylesheet" type="text/css" href="css/less.css">
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+	<script type="text/javascript" src="js/jquery.lighterbox.0.0.2.min.js"></script>
+	<script>
+		if (screen.availWidth < 990 || screen.availHeight < 720) {
+			window.location.href = "/mobile";
+		} else {
+			window.onload = function () {
+				$(".loading").fadeOut();
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<div class="loading">
+	</div>
+	<a class="frame topFrame show_team">
+		<span class="menuIcon iconTeam">
+			<img src="images/team.png" alt="名人堂图标">
+			<span class="menuWord wordTeam">名人堂</span>
+		</span>
+	</a>
+	<a class="frame leftFrame show_stack">
+		<span class="menuIcon iconAbout">
+			<img src="images/department.png" alt="部门图标">
+			<span class="menuWord wordStack">部门</span>
+		</span>
+	</a>
+	<a class="frame bottomFrame show_contact">
+		<span class="menuIcon iconProduct">
+			<img src="images/photo.png" alt="照片图标">
+			<span class="menuWord wordAbout">照片</span>
+		</span>
+	</a>
+	<a class="frame rightFrame show_work">
+		<span class="menuIcon iconDepartment">
+			<img src="images/work.png" alt="作品图标">
+			<span class="menuWord wordProduct">作品</span>
+		</span>
+	</a>
+	<div class="pageCont">
+		<div class="burgerCont burgerContClose" style="left: 942px;">
+			<div class="burger burger1"></div>
+			<div class="burger burger2"></div>
+			<div class="burger burger3"></div>
+		</div>
+		<div class="teamCon">
+			<div class="CERTLogo">CERT</div>
+			<div class="teamText">
+				<span class='teamText-tiny'>专注&nbsp;I&nbsp;T&nbsp;技术 </span>
+				<br>
+				<span class="teamText-strong">服务交大师生</span>
+			</div>
+			<div class="teamBoxes">
+				<div class="teamMumber">
+					<div class="teamMumberItem">
+						<div class="flipper">
+							<div class="mumberFace" id="chenQi">
+								<p class="name">陈奇</p>
+							</div>
+							<div class="mumberData">
+								<div class="DataInner">
+									<span class="dataName">陈奇</span>
+									<br><br>
+									<span class="dataTiny">
+									软件研发部(2012)
+								</span>
+									<br>
+									<span class="dataTiny">
+									CERT组长(2012-2013)
+								</span>
+									<br>
+									<br>
+									<br>
+									<span class="dataTiny">
+									就职公司：360公司
+								</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="teamMumberItem">
+
+						<div class="flipper">
+							<div class="mumberFace" id="caoXuDong">
+								<p class="name">曹旭东</p>
+							</div>
+							<div class="mumberData">
+								<div class="DataInner">
+									<span class="dataName">曹旭东</span>
+									<br><br>
+									<span class="dataTiny">
+									网站建设部
+								</span>
+									<br>
+									<br>
+									<br>
+									<span class="dataTiny">
+									就职公司：什么值得买
+								</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="teamMumberItem">
+						<div class="flipper">
+							<div class="mumberFace" id="pengWei">
+								<p class="name">彭炜</p>
+							</div>
+							<div class="mumberData">
+								<div class="DataInner">
+									<span class="dataName">彭炜</span>
+									<br><br>
+									<span class="dataTiny">
+									网站建设部(2012)
+								</span>
+									<br>
+									<br>
+									<br>
+									<span class="dataTiny">
+									就职公司：百度
+								</span>
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="teamMumberItem">
+						<div class="flipper">
+							<div class="mumberFace" id="liXin">
+								<p class="name">李鑫</p>
+							</div>
+							<div class="mumberData">
+								<div class="DataInner">
+									<span class="dataName">李鑫</span>
+									<br><br>
+									<span class="dataTiny">
+									硬件维修部(2011)
+								</span>
+									<br>
+									<br>
+									<br>
+									<span class="dataTiny">
+									就职公司：分期乐
+								</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="teamMumberItem">
+						<div class="flipper">
+							<div class="mumberFace" id="yanMingRui">
+								<p class="name">严敏睿</p>
+							</div>
+							<div class="mumberData">
+								<div class="DataInner">
+									<span class="dataName">严敏睿</span>
+									<br><br>
+									<span class="dataTiny">
+									网络安全部(2013)
+								</span>
+									<br>
+									<br>
+									<br>
+									<span class="dataTiny">
+									就职公司：360公司
+								</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="teamMumberItem">
+						<div class="flipper">
+							<div class="mumberFace" id="qiaoZhi">
+								<p class="name">乔治</p>
+							</div>
+							<div class="mumberData">
+								<div class="DataInner">
+									<span class="dataName">乔治</span>
+									<br><br>
+									<span class="dataTiny">
+									扫地组组长
+								</span>
+									<br>
+									<br>
+									<br>
+									<span class="dataTiny">
+									就职公司：淘乐创想科技公司
+								</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="arrow">
+				<img src="images/scroll_team.png" alt="滚动图标">
+				<br>滚动查看更多
+			</div>
+		</div>
+		<div class="workCon">
+			<div class="page firstPage">
+				<div class="firstColumn">
+					<div class="workTitle">
+						01
+					</div>
+					<div class="workDescription">
+						<div class="title">
+							华交校园通
+						</div>
+						<div class="description">
+							华交校园通是由计算机紧急响应组在2015年开发的一款针对华东交通大学校园服务的应用软件。<br> 主要服务有：
+							<span>成绩查询</span>
+							<span>考试安排</span>
+							<span>一卡通</span>
+							<span>课表</span>
+							<br> Android : <a href="">喵喵喵</a>
+							<br>
+
+							<br> 下载地址：
+							<a href="http://app.mi.com/details?id=com.cert.certer&ref=search">Android版</a>
+						</div>
+					</div>
+				</div>
+				<div class="secondColumn">
+					<div class="workPic">
+						<!-- <img src="images/work1.png" alt=""> -->
+					</div>
+				</div>
+			</div>
+			<!-- 			<div class="page secondPage">
+				<div class="firstColumn">
+					<div class="workTitle">
+						02
+					</div>
+					<div class="workDescription">
+						
+					</div>
+				</div>
+				<div class="secondColumn">
+					<div class="workPic">
+						
+					</div>
+				</div>
+			</div>
+			<div class="page thirdPage">
+				<div class="firstColumn">
+					<div class="workTitle">
+						03
+					</div>
+					<div class="workDescription">
+						
+					</div>
+				</div>
+				<div class="secondColumn">
+					<div class="workPic">
+						
+					</div>
+				</div>
+			</div> -->
+			<!-- <div class="list">
+				<a id="1" class="grotLight chosenPage" href="#" onclick="toPage(this)">01</a> <span class="hide-mobile">— —</span>
+				<a id="2" class="grotLight" href="#" onclick="toPage(this)">02</a> <span class="hide-mobile">— —</span>
+				<a id="3" class="grotLight" href="#" onclick="toPage(this)">03</a>
+			</div> -->
+		</div>
+		<div class="stackCon">
+			<div class="container">
+				<div class="item item1">
+					<div class="center center1">
+						<div class="icon icon1"></div>
+						<div class="content content1">
+							<h3>硬件维修部</h3>
+
+						</div>
+						<div class="contentDes">
+							<p>爱机故障了？我们帮你解决！</p>
+							<p>我们有着最精湛的电脑维修技术</p>
+							<p>给你提供最快最优质的服务</p>
+							<p>同时教你如何从入门到精通</p>
+						</div>
+					</div>
+					<div class="mask mask1"></div>
+				</div>
+				<div class="item item2">
+					<div class="center center2">
+						<div class="icon icon2"></div>
+						<div class="content content2">
+							<h3>产品设计部</h3>
+
+						</div>
+						<div class="contentDes">
+							<p>这里是大触，射鸡湿，产品汪们的聚集地</p>
+							<p>如果你热爱互联网，对互联网产品感兴趣</p>
+							<p>喜爱设计艺术，想研发属于自己的产品</p>
+							<p>还等什么，赶快加入我们吧~</p>
+						</div>
+					</div>
+					<div class="mask mask2"></div>
+				</div>
+				<div class="item item3">
+					<div class="center center3">
+						<div class="icon icon3"></div>
+						<div class="content content3">
+							<h3>技术研发部</h3>
+
+						</div>
+						<div class="contentDes">
+							<p>我们是这里最热衷于编程的coder</p>
+							<p>我们执着于最完美的程序</p>
+							<p>C++？PHP？HTML?Java？</p>
+							<p>这些，是我们永恒不变的信仰</p>
+						</div>
+					</div>
+					<div class="mask mask3"></div>
+				</div>
+				<div class="item item4">
+					<div class="center center4">
+						<div class="icon icon4"></div>
+						<div class="content content4">
+							<h3>创意策划部</h3>
+						</div>
+						<div class="contentDes">
+							<p>我们有着最具创意的大脑</p>
+							<p>精心策划着社团的每一项活动</p>
+							<p>我们不仅是在背后安排好一切的大boss</p>
+							<p>也是活跃在微博&微信上的段子手</p>
+						</div>
+					</div>
+					<div class="mask mask4"></div>
+				</div>
+				<!--<div class="Depart Depart1">
+					
+				</div>
+				<div class="Depart Depart2">
+					
+				</div>
+				<div class="Depart Depart3">
+					
+				</div>
+				<div class="Depart Depart4">
+					
+				</div>-->
+			</div>
+		</div>
+		<div class="contactCon">
+			<h2 class="bg2">欢乐的CERT</h2>
+			<div class="waterfall">
+				<div>
+					<a href="images/1.jpg" class="lighterbox" id="pic1">
+						<img src="images/1.jpg" alt="2016年百团大会" />
+						<div class="contactConDes">
+							<h2 class="lighterbox-title">2016年百团大会</h2>
+							<span class="lighterbox-desc">社团合照</span>
+						</div>
+
+					</a>
+				</div>
+				<div>
+					<a href="images/2.jpg" class="lighterbox" id="pic2">
+						<img src="images/2.jpg" alt="2016年社团成员照" />
+						<div class="contactConDes">
+							<h2 class="lighterbox-title">2016年社团成员照</h2>
+						</div>
+
+					</a>
+				</div>
+				<div>
+					<a href="images/3.jpg" class="lighterbox" id="pic3">
+						<img src="images/3.jpg" alt="2016年社团大聚会、李杰、李嘉豪" />
+						<div class="contactConDes">
+							<h2 class="lighterbox-title">2016年社团大聚会</h2>
+							<span class="lighterbox-desc">李杰、李嘉豪</span>
+						</div>
+
+					</a>
+				</div>
+				<div>
+					<a href="images/5.jpg" class="lighterbox" id="pic5">
+						<img src="images/5.jpg" alt="2016年社团大聚会" />
+						<div class="contactConDes">
+							<h2 class="lighterbox-title">2016年社团大聚会</h2>
+						</div>
+
+					</a>
+				</div>
+				<div>
+					<a href="images/6.jpg" class="lighterbox" id="pic5">
+						<img src="images/6.jpg" alt="2016年成员大会" />
+						<div class="contactConDes">
+							<h2 class="lighterbox-title">2016年成员大会</h2>
+							<span class="lighterbox-desc">胡泽坤、王子豪、黄晓丽</span>
+						</div>
+
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="indexCon">
+			<div class="content">
+				<span class="logo">
+			        <img src="images/pic01.jpg" alt="响应组图标">
+			    </span>
+				<header class="bannerWord">
+					<h2>Hello CERT</h2>
+					<p>欢迎来到计算机紧急响应组</p>
+				</header>
+				<div class="bannerDes">
+					计算机紧急响应组（Computer Emergency Response Team 简称CERT）
+					<br>成立于2005年9月1日，是隶属于华东交通大学现代教育技术中心网络信息部，
+					<br>从事网络安全、软件研发、网站建设、硬件维修等技术研究的公益性技术团队。
+					<br>同时也是华东交通大学规模最大、最具亲和力的计算机社团。
+				</div>
+				<div class="register">
+					<button class="join">加入我们</button>
+				</div>
+			</div>
+			<footer id="footer" class="footer">
+				<ul class="icons">
+					<li><a href="#" class="wechat" target="_blank"><span class="icon icon-wechat"></span><div class="qrcode"></div></a></li>
+					<li><a href="http://weibo.com/ecjtucert" target="_blank"><span class="icon icon-sina-weibo"></span></a></li>
+					<li><a href="https://github.com/CERTeam" target="_blank"><span class="icon icon-github"></span></a></li>
+					<li><a href="https://blog.ecjtu.org/" target="_blank"><span class="icon icon-blogger"></span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>© 华东交通大学 现代教育技术中心 <a href="https://www.ecjtu.org">计算机紧急响应组 </a>交大蓝盾 赣ICP12003533号-1</li>
+					<li>Design & Layout: <a href="https://www.ecjtu.org">
+			            LinLiang & Lijie
+			        </a></li>
+				</ul>
+			</footer>
+		</div>
+		<div class="joinCon">
+			<div class="page firstPage">
+				<div class="firstColumn">
+					<div class="CERTLogo">CERT</div>
+					<div class="teamText">
+						<span class='teamText-tiny'>专注&nbsp;I&nbsp;T&nbsp;技术 </span>
+						<br>
+						<span class="teamText-strong">服务交大师生</span>
+						<div class="description">
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+					</div>
+				</div>
+				<div class="secondColumn">
+					<form class="joinForm" action="javascript:0;">
+						<div class="form-group">
+							<label for="">姓名</label>
+							<input type="text" class="joinName" placeholder="请输入你的名字">
+						</div>
+						<div class="form-group">
+							<label for="">联系方式</label>
+							<input type="text" class="joinPhone" placeholder="请输入你的电话号码"">
+						</div>
+						<div class="form-group">
+							<label for="">QQ</label>
+							<input type="text" class="joinQQ" placeholder="请输入你的QQ">
+						</div>
+						<div class="form-group">
+							<label for="">学院</label>
+							<input type="text" class="joinCollege" placeholder="请输入你的学院">
+						</div>
+						<div class="form-group">
+							<label for="">部门</label>
+							<select class="joinDepart">
+							<option value ="产品设计部">产品设计部</option>
+							<option value ="技术研发部">技术研发部</option>
+							<option value="硬件维修部">硬件维修部</option>
+							<option value="创意策划部">创意策划部</option>
+						</select>
+						</div>
+						<div class="form-group button-group">
+							<button class="subJoin" onclick="subJoin()">提交</button>
+							<div id="notify"></div>
+						</div>
+					</form>
+					<div id="success"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript">
+	$(function () { // document ready
+
+		$(".lighterbox").lighterbox({
+			overlayColor: "white"
+		});
+
+	});
+</script>
+
+</html>

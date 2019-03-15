@@ -1,0 +1,282 @@
+.j-container {
+	z-index: 105;
+	margin: 0 auto;
+	position: absolute;
+	height: 500px;
+	border: 10px #F85670 solid;
+	border-radius: 5px;
+	z-index: 999;
+}
+
+.j-background {
+	margin: 0 auto;
+	position: absolute;
+	height: 500px;
+	border: 10px #F85670 solid;
+	border-radius: 5px;
+	background-color: #000;
+	opacity: .5;
+}
+
+.j-input-container {
+	margin: 0 auto;
+	width: 80%;
+	height: 100%;
+}
+
+.j-title {
+	display: inline-block;
+	top: 10px;
+	position: relative;
+	color: #fff;
+}
+
+.j-input {
+	// opacity: .8;
+	display: block;
+	margin-top: 1rem;
+}
+
+.j-input input, .j-input select, .j-input textarea {
+	width: 100%;
+	border: 2px #F85670 solid;
+	border-radius: 1px;
+	margin-top: 10px;
+	font-size: 2rem;
+}
+
+.j-input input, .j-input select {
+	height: 3rem;
+}
+
+.line-l, .line-r {
+	position: relative;
+	top: 13px;
+	left: -1px;
+	width: 26px;
+	border: 2px #F85670 solid;
+}
+
+.line-l {
+	transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	top: 10px;
+}
+
+.line-r {
+	top: 5px;
+	transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+}
+
+#join-plugin {
+	position: fixed;
+	z-index: 999;
+}
+
+#mask {
+	width: 100vw;
+	height: 100vh;
+	background-color: #000;
+	opacity: .4;
+	position: absolute;
+}
+
+#j-close {
+	width: 30px;
+	height: 30px;
+	position: relative;
+	left: 53px;
+	display: inline-block;
+	border: 4px #F85670 solid;
+	border-radius: 19px;
+	-webkit-transition: .8s ease-out;
+}
+
+#j-close:hover {
+	transform: rotate(-360deg);
+	-moz-transform: rotate(-360deg);
+	-webkit-transform: rotate(-360deg);
+}
+
+#join {
+	margin: 0 auto;
+	width: 8rem;
+	height: 3rem;
+	border: 3px #FFF solid;
+	border-radius: 3px;
+	text-align: center;
+	vertical-align: center;
+	color: white;
+	line-height: 3rem;
+	font-size: 1.6rem;
+	top: 1rem;
+	position: relative;
+	cursor: pointer;
+	-webkit-transition: .2s ease-out;
+}
+
+#join:hover {
+	border: 3px #F85670 solid;
+	color: #F85670;
+}
+
+#notify {
+	position: relative;
+	top: 20px;
+	text-align: center;
+	font-size: 1rem;
+	line-height: 1rem;
+	color: white;
+	animation: shake 0.1s infinite;
+	-webkit-animation: shake 0.1s infinite;
+ /* Safari and Chrome */
+}
+
+#success {
+	display: none;
+	z-index: 106;
+	margin: 0 auto;
+	position: absolute;
+	height: 500px;
+	border: 10px #F85670 solid;
+	background-color: #F85670;
+	border-radius: 5px;
+}
+
+#success div {
+	position: relative;
+	margin-top: 100px;
+	font-size: 3rem;
+	color: white;
+}
+
+::selection {
+	color: white;
+	background: #F85670;
+}
+
+@keyframes shake {
+	0%, 100%, 60% {
+		transform: rotate(0);
+	}
+
+	20% {
+		transform: rotate(-4deg);
+	}
+
+	80% {
+		transform: rotate(4deg);
+	}
+}
+
+@-webkit-keyframes shake /* Safari and Chrome */ {
+	0%, 100%, 60% {
+		-webkit-transform: rotate(0);
+	}
+
+	20% {
+		-webkit-transform: rotate(-8deg);
+	}
+
+	80% {
+		-webkit-transform: rotate(8deg);
+	}
+}
+
+@media screen and (max-width: 370px) {
+	.j-container {
+		z-index: 105;
+		margin: 0 auto;
+		position: absolute;
+		width: 280px;
+		height: 440px;
+		border: 10px #F85670 solid;
+		border-radius: 5px;
+	}
+
+	.j-background {
+		margin: 0 auto;
+		position: absolute;
+		width: 280px;
+		height: 440px;
+		border: 10px #F85670 solid;
+		border-radius: 5px;
+		background-color: #000;
+	}
+
+	.j-title {
+		height: 30px;
+	}
+
+	.j-title span {
+		font-size: 30px;
+		line-height: 30px;
+	}
+
+	#j-close {
+		left: 70px;
+		top: 15px;
+	}
+
+	#success {
+		width: 280px;
+		height: 440px;
+	}
+}
+
+@media screen and (min-width: 370px) {
+	.j-container {
+		z-index: 105;
+		margin: 0 auto;
+		position: absolute;
+		width: 340px;
+		height: 500px;
+		border: 10px #F85670 solid;
+		border-radius: 5px;
+	}
+
+	.j-background {
+		margin: 0 auto;
+		position: absolute;
+		width: 340px;
+		height: 500px;
+		border: 10px #F85670 solid;
+		border-radius: 5px;
+		background-color: #000;
+	}
+
+	.j-title {
+		height: 50px;
+	}
+
+	.j-title span {
+		font-size: 50px;
+		line-height: 50px;
+	}
+
+	#j-close {
+		left: 43px;
+		top: 10px;
+		cursor: pointer;
+	}
+
+	#success {
+		width: 340px;
+		height: 500px;
+	}
+}
+
+.slideBto {
+	width: 4vh;
+	height: 17vh;
+	background-image: url(../images/pic20.png);
+	background-position: center;
+	background-size: cover;
+	position: fixed;
+	z-index: 100;
+	top: 40%;
+	right: 0;
+}
