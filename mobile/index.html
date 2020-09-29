@@ -3,6 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+	<script>
+	var xmlrequest;
+	if (window.XMLHttpRequest) { //判定兼容性
+		xmlrequest = new XMLHttpRequest(); //Dom2浏览器
+	}
+	else if (window.ActiveXObject) {  //IE浏览器
+		try {
+			xmlrequest = new ActiveXObject("msxml2.XMLHTTP");
+		} catch (e) {
+			try {
+				xmlrequest = new ActiveXObject("Microsoft.XMLHTTP");
+			} catch (e) { }
+		}
+	}
+	if(xmlrequest!=null) {
+		XMLHttpRequest.timeout=30;
+		xmlrequest.onreadystatechange = state_Change;
+		xmlrequest.open("GET", "http://fresh.ecjtu.org/network", true);
+		xmlrequest.send(null);
+	}
+	else {
+		alert("请更换新的浏览器");
+	}
+	function state_Change() {
+			if (xmlrequest.readyState == 4) {// 4 = "loaded"
+				if (xmlrequest.status == 200) {// 200 = OK 
+					xmldata = JSON.parse(xmlrequest.responseText);
+					console.log(xmldata);
+					if(xmldata.msg=='校园网'){
+						window.location.replace("http://home.ecjtu.org/mobile");
+					}
+				}
+				else {
+
+				}
+			}
+	}
+	</script>
     <title>华东交通大学计算机紧急响应组</title>
     <link rel="stylesheet" type="text/css" href="css/style.css"><!-- 字体图标样式 -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
