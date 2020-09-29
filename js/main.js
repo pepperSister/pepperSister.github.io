@@ -181,18 +181,24 @@ function subJoin() {
 	var QQ = $("input.joinQQ").val().trim();
 	var college = $("input.joinCollege").val().trim();
 	var depart = $(".joinDepart").val().trim();
+	var mail = $("input.joinMail").val().trim();
 
 	var msg = '';
 	var numreg = new RegExp("^[0-9]*$");
 	var hanreg = new RegExp('^[\u4e00-\u9fa5]+$');
+	var mailreg = new RegExp('^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$');
 	if (name.length > 7 || name.length < 1) {
 		msg = "姓名长度？(╯‵□′)╯︵┻━┻";
 	} else if (!hanreg.test(name)) {
 		msg = "姓名不对！（〃｀д´ ) 👚﻿";
+	} else if (!mailreg.test(mail)) {
+		msg = "请输入正确的邮箱";
 	} else if (phone.length != 11 || phone.length < 1) {
 		msg = "手机号长度？(╯‵□′)╯︵┻━┻";
 	} else if (!numreg.test(phone)) {
 		msg = "手机号不对！（〃｀д´ ) 👚﻿";
+	} else if (college.length < 1) {
+		msg = "学院呢？（〃｀д´ ) 👚﻿";
 	} else if (depart.length < 1) {
 		msg = "部门呢？（〃｀д´ ) 👚﻿";
 	}
@@ -202,7 +208,7 @@ function subJoin() {
 		$('#notify').hide(1000);
 		return false;
 	}
-	$.post("http://fresh.ecjtu.org/fresh/join/index",'name='+name+'&college='+college+'&QQ='+QQ+'&phone='+phone+'&depart='+depart,function (data) {
+	$.post("http://fresh.ecjtu.org/fresh/join/index", 'name=' + name + '&college=' + college + '&QQ=' + QQ + '&phone=' + phone + '&depart=' + depart + '&mail=' + mail,function (data) {
 			data=JSON.parse(data);
 			if (data.status == 200) {
 				$("#success").html("报名成功!请等待短信或邮件提醒");
