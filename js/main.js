@@ -200,11 +200,10 @@ function subJoin() {
 		$('#notify').text(msg);
 		$('#notify').show();
 		$('#notify').hide(1000);
-		return;
+		return false;
 	}
-	$.post("http://lj661.cn:8000/fresh",'name='+name+'&college='+college+'&QQ='+QQ+'&phone='+phone+'&depart='+depart,function (data) {
-			console.log(data);
-			console.log(data.status);
+	$.post("http://fresh.ecjtu.org/fresh/join/index",'name='+name+'&college='+college+'&QQ='+QQ+'&phone='+phone+'&depart='+depart,function (data) {
+			data=JSON.parse(data);
 			if (data.status == 200) {
 				$("#success").html("报名成功!请等待短信或邮件提醒");
 				$("#success").show();
@@ -215,7 +214,11 @@ function subJoin() {
 				$("#success").show();
 				setTimeout(function(){$("#success").hide();},3000);
 
-			} else {
+			} else if(data.status==400){
+				$("#success").html(data.msg);
+				$("#success").show();
+				setTimeout(function () { $("#success").hide(); }, 3000);
+			}else {
 				$("#success").html(":(失败了");
 				$("#success").show();
 				setTimeout(function(){$("#success").hide();},3000);
