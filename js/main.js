@@ -16,6 +16,9 @@ $(function () {
 	showWork(".workCon .page");
 	turn(".mumberFace", ".mumberData")
 	showPage(".join", ".joinCon");
+				$("#success").html("请用校园网进入页面报名（用ecjtu的wifi或宿舍宽带或图书馆wifi）");
+				$("#success").show();
+				setTimeout(function(){$("#success").hide();},3000);
 });
 $(window).resize(function () {
 	reset();
