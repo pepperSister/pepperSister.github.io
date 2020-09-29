@@ -194,6 +194,10 @@
                 <input type="text" class="joinName" placeholder="请输入你的名字">
             </div>
             <div class="form-group">
+                <label for="">邮箱</label>
+                <input type="text" class="joinMail" placeholder="请输入你的邮箱">
+            </div>
+            <div class="form-group">
                 <label for="">联系方式</label>
                 <input type="text" class="joinPhone" placeholder="请输入你的电话号码">
             </div>
@@ -228,19 +232,26 @@
         var name = $("input.joinName").val().trim();
         var phone = $("input.joinPhone").val().trim();
         var QQ = $("input.joinQQ").val().trim();
+        var mail = $("input.joinMail").val().trim();
         var college = $("input.joinCollege").val().trim();
         var depart = $(".joinDepart").val().trim();
         var msg = '';
         var numreg = new RegExp("^[0-9]*$");
         var hanreg = new RegExp('^[\u4e00-\u9fa5]+$');
+        var mailreg = new RegExp('^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$');
         if (name.length > 7 || name.length < 1) {
             msg = "姓名长度？(╯‵□′)╯︵┻━┻";
         } else if (!hanreg.test(name)) {
             msg = "姓名不对！（〃｀д´ ) 👚﻿";
-        } else if (phone.length != 11 || phone.length < 1) {
+        } else if (!mailreg.test(mail)) {
+            msg = "请输入正确的邮箱";
+        }
+         else if (phone.length != 11 || phone.length < 1) {
             msg = "手机号长度？(╯‵□′)╯︵┻━┻";
         } else if (!numreg.test(phone)) {
             msg = "手机号不对！（〃｀д´ ) 👚﻿";
+        } else if (college.length<1) {
+            msg = "学院呢？（〃｀д´ ) 👚﻿";
         } else if (depart.length < 1) {
             msg = "部门呢？（〃｀д´ ) 👚﻿";
         }
@@ -250,7 +261,7 @@
             $('#notify').hide(1000);
             return;
         }
-        $.post("http://fresh.ecjtu.org/fresh/join/index", 'name=' + name + '&college=' + college + '&QQ=' + QQ + '&phone=' + phone + '&depart=' + depart,
+        $.post("http://fresh.ecjtu.org/fresh/join/index", 'name=' + name + '&college=' + college + '&QQ=' + QQ + '&phone=' + phone + '&depart=' + depart + '&mail=' + mail,
             function (data) {
                 $(".subJoin").attr("disabled");
                 data=JSON.parse(data);
