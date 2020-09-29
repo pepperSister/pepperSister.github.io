@@ -21,7 +21,7 @@
 		if(xmlrequest!=null) {
 			XMLHttpRequest.timeout=30;
 			xmlrequest.onreadystatechange = state_Change;
-			xmlrequest.open("GET", "http://home.ecjtu.org/network", true);
+			xmlrequest.open("GET", "http://fresh.ecjtu.org/network", true);
 			xmlrequest.send(null);
 		}
 		else {
@@ -33,7 +33,7 @@
 						xmldata = JSON.parse(xmlrequest.responseText);
 						console.log(xmldata);
 						if(xmldata.msg=='校园网'){
-							window.location.replace("http://fresh.ecjtu.org");
+							window.location.replace("http://home.ecjtu.org");
 						}
 					}
 					else {
