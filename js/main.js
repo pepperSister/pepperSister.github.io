@@ -16,9 +16,7 @@ $(function () {
 	showWork(".workCon .page");
 	turn(".mumberFace", ".mumberData")
 	showPage(".join", ".joinCon");
-				$("#success").html("请用校园网进入页面报名（用ecjtu的wifi或宿舍宽带或图书馆wifi）");
-				$("#success").show();
-				setTimeout(function(){$("#success").hide();},3000);
+
 });
 $(window).resize(function () {
 	reset();
@@ -179,6 +177,9 @@ function turn(face, data) {
 }
 
 function subJoin() {
+	$("#success").html("请用校园网进入页面报名（用ecjtu的wifi或宿舍宽带或图书馆wifi）");
+	$("#success").show();
+	setTimeout(function(){$("#success").hide();},3000);
 	var name = $("input.joinName").val().trim();
 	var phone = $("input.joinPhone").val().trim();
 	var QQ = $("input.joinQQ").val().trim();
