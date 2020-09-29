@@ -227,7 +227,9 @@
     </div>
 
 </body>
-<script>
+<script>            $("#success").html("请连接校园网报名");
+                    $("#success").show();
+                    setTimeout(function(){$("#success").hide();},6000);
     function subJoin() {
         var name = $("input.joinName").val().trim();
         var phone = $("input.joinPhone").val().trim();
