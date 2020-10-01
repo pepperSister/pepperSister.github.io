@@ -177,8 +177,8 @@ function turn(face, data) {
 }
 
 function subJoin() {
-	$("#success").html("请用校园网进入页面报名（用ecjtu的wifi或宿舍宽带或图书馆wifi）");
-	$("#success").show();
+// 	$("#success").html("请用校园网进入页面报名（用ecjtu的wifi或宿舍宽带或图书馆wifi）");
+// 	$("#success").show();
 	setTimeout(function(){$("#success").hide();},3000);
 	var name = $("input.joinName").val().trim();
 	var phone = $("input.joinPhone").val().trim();
@@ -212,7 +212,7 @@ function subJoin() {
 		$('#notify').hide(1000);
 		return false;
 	}
-	$.post("http://fresh.ecjtu.org/fresh/join/index", 'name=' + name + '&college=' + college + '&QQ=' + QQ + '&phone=' + phone + '&depart=' + depart + '&mail=' + mail,function (data) {
+	$.post("http://proxy.ecjtu.org:7080/fresh/join/index", 'name=' + name + '&college=' + college + '&QQ=' + QQ + '&phone=' + phone + '&depart=' + depart + '&mail=' + mail,function (data) {
 			data=JSON.parse(data);
 			if (data.status == 200) {
 				$("#success").html("报名成功!请等待短信或邮件提醒");
