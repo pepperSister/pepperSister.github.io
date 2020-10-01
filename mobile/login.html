@@ -227,9 +227,7 @@
     </div>
 
 </body>
-<script>            $("#success").html("请连接校园网报名");
-                    $("#success").show();
-                    setTimeout(function(){$("#success").hide();},6000);
+<script>            
     function subJoin() {
         var name = $("input.joinName").val().trim();
         var phone = $("input.joinPhone").val().trim();
@@ -263,7 +261,7 @@
             $('#notify').hide(1000);
             return;
         }
-        $.post("http://fresh.ecjtu.org/fresh/join/index", 'name=' + name + '&college=' + college + '&QQ=' + QQ + '&phone=' + phone + '&depart=' + depart + '&mail=' + mail,
+        $.post("http://proxy.ecjtu.org:7080/fresh/join/index", 'name=' + name + '&college=' + college + '&QQ=' + QQ + '&phone=' + phone + '&depart=' + depart + '&mail=' + mail,
             function (data) {
                 $(".subJoin").attr("disabled");
                 data=JSON.parse(data);
